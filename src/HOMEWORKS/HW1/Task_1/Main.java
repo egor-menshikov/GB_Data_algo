@@ -7,15 +7,18 @@ public class Main {
     public static void main(String[] args) {
         int[] array = randomArray(15, -5, 23);
         System.out.println(Arrays.toString(array));
+
         heapSort(array);
         System.out.println(Arrays.toString(array));
     }
 
     private static void heapSort(int[] arr) {
         int n = arr.length;
+
         for (int i = n / 2 - 1; i >= 0; i--) {
             makeMaxHeap(arr, i, n);
         }
+
         for (int i = n - 1; i >= 0; i--) {
             int temp = arr[i];
             arr[i] = arr[0];
@@ -28,10 +31,13 @@ public class Main {
         int left = i * 2 + 1;
         int right = i * 2 + 2;
         int max = i;
+
         if (left < n && arr[left] > arr[max])
             max = left;
+
         if (right < n && arr[right] > arr[max])
             max = right;
+
         if (max != i) {
             int temp = arr[i];
             arr[i] = arr[max];
@@ -44,6 +50,7 @@ public class Main {
     public static int[] randomArray(int len, int min, int max) {
         Random rd = new Random();
         int[] arr = new int[len];
+
         for (int i = 0; i < len; i++) {
             arr[i] = rd.nextInt(min, max + 1);
         }
