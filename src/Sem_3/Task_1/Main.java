@@ -5,8 +5,8 @@ public class Main {
         LinkedList list = new LinkedList();
 
         list.add(5);
-        list.add(3);
-        list.add(7);
+        list.add("3");
+        list.add(false);
         list.print();
 
     }
