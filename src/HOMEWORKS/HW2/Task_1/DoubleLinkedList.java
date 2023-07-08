@@ -46,7 +46,6 @@ public class DoubleLinkedList {
         Node temp = head;
         head = tail;
         tail = temp;
-        head.previous = null;
     }
 
     public void print() {

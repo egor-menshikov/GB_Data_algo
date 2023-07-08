@@ -7,7 +7,7 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         DoubleLinkedList list = new DoubleLinkedList();
-        randomList(list, 7, 0, 13);
+        randomList(list, 10, 0, 13);
         list.print();
         list.reverse();
         list.print();
