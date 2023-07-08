@@ -33,19 +33,21 @@ public class DoubleLinkedList {
 
     // Разворот списка
     public void reverse() {
-        Node current = tail;
-        Node left;
-        Node right;
-        while (current != null) {
-            left = current.previous;
-            right = current.next;
-            current.previous = right;
-            current.next = left;
-            current = current.next;
+        if (head != null && head.next != null) {
+            Node current = tail;
+            Node left;
+            Node right;
+            while (current != null) {
+                left = current.previous;
+                right = current.next;
+                current.previous = right;
+                current.next = left;
+                current = current.next;
+            }
+            Node temp = head;
+            head = tail;
+            tail = temp;
         }
-        Node temp = head;
-        head = tail;
-        tail = temp;
     }
 
     public void print() {
